@@ -12,12 +12,12 @@ void qwery(string[] array){
 	}
 }
 
-void asdfg(string[] array){
+void asdf(string[] array){
 	Console.WriteLine("");
-	///x
+	qwery(array);
 	string[] shortArray = arr_short(array);
 	Console.WriteLine("");
-	///x
+	qwery(shortArray);
 	Console.WriteLine();
 }
 
@@ -39,3 +39,6 @@ string[] arr_short(string[] array){
     Array.Resize(ref result, count);
     return result;
 }
+
+asdf(arr1);
+*/
