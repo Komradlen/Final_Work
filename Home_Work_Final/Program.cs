@@ -2,9 +2,9 @@
 либо равна 3 символам. Первоначальный массив можно ввести с клавиатуры, либо задать на старте выполнения алгоритма. 
 При решении не рекомендуется пользоваться коллекциями, лучше обойтись исключительно массивами. */
 
-void qwery(string[] array){
+void PrintArray_2(string[] array){
 	if(array.Length == 0){
-		Console.WriteLine("");
+		Console.WriteLine("В массиве нет таких строк");
 	}
 	else{
 		Array.ForEach(array, (str) => Console.Write($"{str} "));
@@ -12,21 +12,21 @@ void qwery(string[] array){
 	}
 }
 
-void asdf(string[] array){
-	Console.WriteLine("");
-	qwery(array);
-	string[] shortArray = arr_short(array);
-	Console.WriteLine("");
-	qwery(shortArray);
+void PrintArray_1(string[] array){
+	Console.WriteLine("Изначальный массив:");
+	PrintArray_2(array);
+	string[] shortArray = array_short(array);
+	Console.WriteLine("Строки, в которых не более 3-х символов:");
+	PrintArray_2(shortArray);
 	Console.WriteLine();
 }
 
-string[] arr1 = {"Hello", "2", "world", ":-)"};
-string[] arr2 = {"1234", "1567", "-2", "computer science"};
-string[] arr3 = {"Russia", "Denmark", "Kazan"};
+string[] array_1 = {"Hello", "2", "world", ":-)"};
+string[] array_2 = {"1234", "1567", "-2", "computer science"};
+string[] array_3 = {"Russia", "Denmark", "Kazan"};
 int max_lenght = 3;
 
-string[] arr_short(string[] array){
+string[] array_short(string[] array){
 	int length = array.Length;			
 	string[] result = new string[length];
 	int count = 0;		
@@ -40,5 +40,6 @@ string[] arr_short(string[] array){
     return result;
 }
 
-asdf(arr1);
-*/
+PrintArray_1(array_1);
+PrintArray_1(array_2);
+PrintArray_1(array_3);
